@@ -2,23 +2,27 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            count++;
+            double a = Convert.ToDouble(txt_a.Text);
+            double b = Convert.ToDouble(txt_b.Text);
+            double c = Convert.ToDouble(txt_c.Text);
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            double delta = (b * b) - (4 * a * c);
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            double x1 = ((-1 * b) + Math.Sqrt(delta)) / (2 * a);
+            double x2 = ((-1 * b) - Math.Sqrt(delta)) / (2 * a); ;
+
+            string msg = $"O resultado é {x1} e {x2}";
+
+            DisplayAlert("Resultado", msg, "Fechar");
+
+
         }
     }
 
