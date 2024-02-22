@@ -1,16 +1,16 @@
-#Casos de teste
+# Casos de teste
 
-##Delta  Positivo
+## Delta  Positivo
 - a = 2
 - b = -3
 - c = -5
   
-##Delta Negativo
+## Delta Negativo
 - a = 2
 - b = -4
 - c = 6
 
-##Delta Zerado
+## Delta Zerado
 - a = 1
 - b = -6
 - c = 9
